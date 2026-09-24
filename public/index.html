@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>网盘搜 · 全平台网盘资源聚合搜索</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <h1>🔍 网盘搜</h1>
+      <p class="sub">123云盘 / 夸克 / 阿里 / 百度 / 天翼 / 迅雷 · 全平台聚合搜索</p>
+      <div class="search-box">
+        <input id="kw" list="history" placeholder="输入资源名，如：三体 4K" autofocus>
+        <datalist id="history"></datalist>
+        <button id="go">搜索</button>
+        <button id="go2" class="secondary" title="绕过缓存重新搜索一轮，部分数据源结果有延迟">强制刷新</button>
+      </div>
+      <div class="chips" id="chips"></div>
+    </div>
+  </header>
+  <main class="wrap">
+    <div id="status"></div>
+    <div id="list"></div>
+    <div id="empty" class="empty">输入关键词开始搜索 · 关键词越短越好</div>
+  </main>
+  <footer>纯本地运行 · 数据来自公开搜索引擎 · 请支持正版</footer>
+  <script src="app.js"></script>
+</body>
+</html>

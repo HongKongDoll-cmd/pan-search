@@ -1,0 +1,90 @@
+:root {
+  --bg: #f5f7fa;
+  --card: #fff;
+  --text: #1f2430;
+  --muted: #6b7280;
+  --line: #e5e8ef;
+  --brand: #2f6bff;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font: 15px/1.6 "Microsoft YaHei", "PingFang SC", system-ui, sans-serif;
+}
+.wrap { max-width: 860px; margin: 0 auto; padding: 0 16px; }
+
+header { padding: 48px 0 24px; text-align: center; background: linear-gradient(180deg, #eef3ff, var(--bg)); }
+h1 { font-size: 30px; letter-spacing: 1px; }
+.sub { color: var(--muted); margin: 6px 0 22px; font-size: 14px; }
+
+.search-box {
+  display: flex; max-width: 640px; margin: 0 auto 16px;
+  border: 2px solid var(--brand); border-radius: 12px; overflow: hidden; background: #fff;
+}
+.search-box input { flex: 1; border: 0; outline: 0; padding: 13px 16px; font-size: 16px; }
+.search-box button { border: 0; background: var(--brand); color: #fff; padding: 0 24px; font-size: 16px; cursor: pointer; }
+.search-box button.secondary { background: #eef2ff; color: var(--brand); border-left: 1px solid var(--line); font-size: 14px; padding: 0 16px; }
+.search-box button:hover { background: #2258d8; }
+.search-box button.secondary:hover { background: #dbe4ff; }
+
+.chips { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
+.chip {
+  border: 1px solid var(--line); background: #fff; color: var(--muted);
+  padding: 6px 14px; border-radius: 999px; cursor: pointer; font-size: 13px;
+}
+.chip.active { background: var(--brand); border-color: var(--brand); color: #fff; }
+
+#status { margin: 18px 0 12px; color: var(--muted); font-size: 14px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.engs { display: inline-flex; gap: 6px; flex-wrap: wrap; }
+.eng { padding: 2px 8px; border-radius: 6px; font-size: 12px; background: #fff; border: 1px solid var(--line); }
+.eng.ok { color: #0a8a3d; }
+.eng.bad { color: #c2410c; border-color: #fed7aa; background: #fff7ed; }
+.err { color: #dc2626; }
+.spin {
+  width: 14px; height: 14px; border: 2px solid var(--brand); border-top-color: transparent;
+  border-radius: 50%; display: inline-block; animation: r 0.8s linear infinite;
+}
+@keyframes r { to { transform: rotate(360deg); } }
+
+.card {
+  background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+  padding: 16px 18px; margin-bottom: 12px; transition: box-shadow 0.15s;
+}
+.card:hover { box-shadow: 0 4px 16px rgba(47, 107, 255, 0.08); }
+.title { font-size: 16px; font-weight: 600; color: var(--text); text-decoration: none; display: block; margin-bottom: 6px; word-break: break-all; }
+.title:hover { color: var(--brand); }
+.meta { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; font-size: 12px; color: var(--muted); margin-bottom: 6px; }
+.badge { padding: 1px 8px; border-radius: 6px; color: #fff; font-size: 11px; flex-shrink: 0; }
+.t-pan123 { background: #f97316; }
+.t-quark { background: #4f7cff; }
+.t-aliyun { background: #8b5cf6; }
+.t-baidu { background: #2563eb; }
+.t-tianyi { background: #0ea5e9; }
+.t-xunlei { background: #14b8a6; }
+.t-yun139 { background: #22c55e; }
+.t-115 { background: #64748b; }
+.t-weiyun { background: #0ea5e9; }
+.t-lanzou { background: #84cc16; }
+.t-uc { background: #0d9488; }
+.t-pikpak { background: #e11d48; }
+.t-magnet { background: #475569; }
+.t-other { background: #94a3b8; }
+.code { color: #b45309; background: #fef3c7; padding: 1px 8px; border-radius: 6px; font-weight: 600; }
+.snippet { color: var(--muted); font-size: 13px; margin-bottom: 8px; word-break: break-all; }
+.ops { display: flex; gap: 8px; }
+.ops button {
+  border: 1px solid var(--line); background: #f8fafc; color: var(--text);
+  padding: 5px 12px; border-radius: 8px; cursor: pointer; font-size: 12px;
+}
+.ops button:hover { border-color: var(--brand); color: var(--brand); }
+
+.empty { text-align: center; color: var(--muted); padding: 60px 0; }
+footer { text-align: center; color: #9ca3af; font-size: 12px; padding: 30px 0 20px; }
+
+#toast {
+  position: fixed; left: 50%; bottom: 40px; transform: translateX(-50%) translateY(20px);
+  background: #1f2430; color: #fff; padding: 8px 18px; border-radius: 8px;
+  opacity: 0; pointer-events: none; transition: 0.25s; font-size: 13px; z-index: 99;
+}
+#toast.show { opacity: 1; transform: translateX(-50%); }

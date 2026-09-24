@@ -1,0 +1,13 @@
+{
+  "name": "pan-search",
+  "version": "1.0.0",
+  "description": "本地网盘资源聚合搜索工具（123云盘/夸克/阿里/百度/天翼/迅雷）",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cheerio": "^1.2.0",
+    "express": "^4.22.3"
+  }
+}
